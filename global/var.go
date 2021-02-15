@@ -3,17 +3,17 @@ package global
 const (
 	// mapping fields
 	Mapping = "mapping"
-	Id = "id"
-	Host = "host"
-	Uri = "uri"
-	Method = "method"
+	Id      = "id"
+	Host    = "host"
+	Uri     = "uri"
+	Method  = "method"
 
-	// json output fileds
+	// json output fields
 	RequestInfo = "requestInfo"
-	Message = "message"
-	ErrMessage = "error_message"
-	Status = "status"
-	Ok = "ok"
+	Message     = "message"
+	ErrMessage  = "error_message"
+	Status      = "status"
+	Ok          = "ok"
 
 	// params
 	UserId = "userID"
