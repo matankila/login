@@ -9,17 +9,17 @@ moreover it uses as a template for REST based micorservice.
 * go 1.12 + .
 
 ## :zap: How to compile & run locally
-* clone git repo.
-* open cmd in the folder.
-* write the following `go build ./cmd/main`
-    * for windows: run the `main.exe` through terminal / ui.
-    * for linux: run `./main` through terminal.
+* :fork_and_knife: clone git repo `git clone https://github.com/matankila/login.git`.
+* :microscope: open cmd in the folder.
+* :hammer: build - the following `go build ./cmd/main`
+    * :runner: for windows: run the `main.exe` through terminal / ui.
+    * :runner: for linux: run `./main` through terminal.
 
 ## :zap: How to build & run dockerfile
-* clone git repo.
-* open cmd in the folder.  
-* build - `docker build -t matan:v1 .`
-* run   - `docker run -p '8080:8080' --name matanC matan:v1`
+* :fork_and_knife: clone git repo `git clone https://github.com/matankila/login.git`.
+* :microscope: open cmd in the folder.  
+* :hammer: build - `docker build -t matan:v1 .`
+* :runner: run   - `docker run -p '8080:8080' --name matanC matan:v1`
 * Have fun :)
 
 ## :triangular_ruler: Curls for testing
