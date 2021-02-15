@@ -1,3 +1,4 @@
+![alt text](./resources/logo.png =100x100)
 <h1 align="center">Login microservice</h1>
 This repo uses as an example using echo framework, 
 moreover it uses as a template for REST based micorservice.
