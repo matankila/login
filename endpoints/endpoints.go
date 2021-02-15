@@ -11,14 +11,14 @@ import (
 type Endpoint func(c echo.Context) error
 
 type Endpoints struct {
-	Login Endpoint
+	Login    Endpoint
 	Register Endpoint
-	Health Endpoint
+	Health   Endpoint
 	Activate Endpoint
 }
 
 type LoginReq struct {
-	Mail string `json:"mail"`
+	Mail     string `json:"mail"`
 	Password string `json:"password"`
 }
 
@@ -28,9 +28,9 @@ type LoginResp struct {
 
 type RegisterReq struct {
 	FirstName string `json:"firstName"`
-	LastName string `json:"lastName"`
-	Mail string `json:"mail"`
-	Password string `json:"password"`
+	LastName  string `json:"lastName"`
+	Mail      string `json:"mail"`
+	Password  string `json:"password"`
 }
 
 type RegisterResp struct {
@@ -49,13 +49,13 @@ func MakeEndpoints(s service.Service) Endpoints {
 	return Endpoints{
 		Login:    makeLoginEndpoint(s),
 		Register: makeRegisterEndpoint(s),
-		Health: makeHealthEndpoint(s),
+		Health:   makeHealthEndpoint(s),
 		Activate: makeUserActivationEndpoint(s),
 	}
 }
 
 var (
-	registerSuccessfulResp = RegisterResp {
+	registerSuccessfulResp = RegisterResp{
 		Message: "account activation sent to mail",
 	}
 
@@ -128,6 +128,8 @@ func makeUserActivationEndpoint(s service.Service) Endpoint {
 	}
 }
 
+// create a context from request and init it with map containing important info about the request,
+// such as: host, uri, ip, x-request-id, etc..
 func initContext(c echo.Context) context.Context {
 	ctx := c.Request().Context()
 	m := global.GetRequestInfoData(c)

@@ -9,7 +9,6 @@ import (
 	"net/http"
 )
 
-
 type server struct {
 	eps endpoints.Endpoints
 }
@@ -24,7 +23,8 @@ func NewServer(eps endpoints.Endpoints) Server {
 	}
 }
 
-func (s server)Init(framework interface{}) {
+// init framework endpoints & custom error handler
+func (s server) Init(framework interface{}) {
 	var e *echo.Echo
 
 	e, ok := framework.(*echo.Echo)
@@ -38,7 +38,6 @@ func (s server)Init(framework interface{}) {
 	e.POST("/auth/activate/user/:userID", echo.HandlerFunc(s.eps.Activate))
 	e.GET("/health", echo.HandlerFunc(s.eps.Health))
 }
-
 
 // This error handler write to log & returns error response to user.
 func CustomErrorHandler(err error, c echo.Context) {

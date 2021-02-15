@@ -23,14 +23,13 @@ RUN adduser \
     --uid "${UID}" \
     "${USER}"
 
-# use modules
-COPY go.mod .
-
 ENV GO111MODULE=on
+WORKDIR $GOPATH/src
+COPY . .
 RUN go mod download
 RUN go mod verify
 
-COPY . .
+
 
 # Build the binary
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build \
@@ -56,3 +55,4 @@ USER appuser:appuser
 
 # Run the hello binary.
 ENTRYPOINT ["/go/bin/main"]
+EXPOSE 8080
