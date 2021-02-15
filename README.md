@@ -2,9 +2,6 @@
 This repo uses as an example using echo framework & template for login MS
 but generally it can be of use to do other things :)
 
-</br>
----
-
 # How to run docker file
 * clone git repo
 * build - **docker build -t matan:v1 .**
