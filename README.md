@@ -23,7 +23,7 @@ moreover it uses as a template for REST based micorservice.
 * Have fun :)
 
 ## :triangular_ruler: Curls for testing
-* **(expected 200)** `curl -k -X GET http://localhost:8080/health`
-* **(expected 400)** `curl -X POST http://localhost:8080/auth/login -d '{"mail": "test", "password": "test"}' -H 'content-type: application/json'`
-* **(expected 200)** `curl -X POST http://localhost:8080/auth/login -d '{"mail": "test3", "password": "test"}' -H 'content-type: application/json'`
-* **(expected 200)** `curl -X POST http://localhost:8080/auth/register -d '{"mail": "test", "password": "test", "firstName": "test", "lastName": "test"}' -H 'content-type: application/json'`
+* :thumbsup: `curl -k -X GET http://localhost:8080/health`
+* :thumbsdown: `curl -X POST http://localhost:8080/auth/login -d '{"mail": "test", "password": "test"}' -H 'content-type: application/json'`
+* :thumbsup: `curl -X POST http://localhost:8080/auth/login -d '{"mail": "test3", "password": "test"}' -H 'content-type: application/json'`
+* :thumbsup: `curl -X POST http://localhost:8080/auth/register -d '{"mail": "test", "password": "test", "firstName": "test", "lastName": "test"}' -H 'content-type: application/json'`
