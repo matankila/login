@@ -1,4 +1,4 @@
-<h1 style="text-align: center;">Login microservice</h1>
+<h1 align="center">Login microservice</h1>
 This repo uses as an example using echo framework, 
 moreover it uses as a template for REST based micorservice.
 
